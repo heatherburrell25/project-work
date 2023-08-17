@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
-  <div class="topnav" id="myTopnav">
+<!--   <div class="topnav" id="myTopnav">
     <a href="index.html" class="active">Home</a>
     <a href="menu.html">Menu</a>
     <a href="gallery.html">Gallery</a>
@@ -22,7 +22,58 @@
     <a href="visitus.html">Visit Us</a>
    
     </a>
+  </div> -->
+
+<div class="topnav" id="myTopnav">
+    <a href="home.html" class="active">Home</a>
+    <a href="#menu">Menu</a>
+    <a href="#gallery">Gallery</a>
+    <a href="order.html" class=>Order</a>
+    <a href="#visitus">Visit Us</a>
+    <button class="button" onclick="myNotification()"><i class="fa fa-shopping-basket"></i><span id="item-count" >0</span></button>
+    <button id="clear-cart"><i class="fa fa-trash-o"></i></button>
+</a>
   </div>
+  <script>
+    function myNotification() {
+    alert(`You have ${itemCountElement.textContent = itemCount} items in your basket`)
+  }
+// Get the "Add to Basket" buttons
+const addToBasketButtons = document.querySelectorAll('.add-to-basket');
+                          // query SelectorAll method returns all elements that matches a CSS selector(s).
+
+// Get the item count element
+const itemCountElement = document.getElementById('item-count');
+
+// Retrieve item count from localStorage on page load
+let itemCount = parseInt(localStorage.getItem('itemCount')) || 0;
+itemCountElement.textContent = itemCount;
+
+// Function to update item count in both display and storage
+const updateItemCount = (count) => {
+    itemCount = count;
+    itemCountElement.textContent = itemCount;
+    localStorage.setItem('itemCount', itemCount);
+};
+
+// Add event listeners to each "Add to Basket" button
+addToBasketButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        updateItemCount(itemCount + 1);
+    });
+});
+// Get the "Clear Cart" button
+const clearCartButton = document.getElementById('clear-cart');
+
+// Add event listener to the "Clear Cart" button
+clearCartButton.addEventListener('click', () => {
+    // Remove item count from localStorage
+    localStorage.removeItem('itemCount');
+    
+    // Update displayed count to zero
+    updateItemCount(0);
+});
+</script>
 
 <section class="logo-section">
     <img class="logo" src="CODE FIRST CAFE LOGO.png" alt="Code First Cafe logo">
