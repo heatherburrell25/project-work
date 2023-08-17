@@ -243,9 +243,16 @@ addToBasketButtons.forEach(button => {
  
        <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
  
-       <div class="clearfix">
-         <button type="submit" class="signup">Sign Up</button>
-         <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+         <div class="clearfix">
+        <button type="submit" onclick="myFunction()" class="signup">Sign Up</button>
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+
+        <script>
+        function myFunction() {
+          alert("Thanks for signing up!");
+        }
+        </script>
+      
          
          <script>
        
