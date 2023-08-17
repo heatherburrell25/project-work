@@ -31,21 +31,6 @@
     display: none;
   }
 
-.navbutton {
-  cursor: pointer;
-  border: none;
-  background-color: transparent;
-  padding: 16px;
-}    
-
-#clear-cart {
-  cursor: pointer;
-  border: none;
-  background-color: transparent;
-  padding: 0px;
-}
- 
-
 
 /* logo section design */  
 .logo{
