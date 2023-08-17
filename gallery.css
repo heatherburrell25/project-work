@@ -1,10 +1,11 @@
 /* nav bar design */
+
 .topnav {
     background-color: #DBC1AC;
     overflow: hidden;
     font-family: roboto;
     font-weight: bold;
-
+  
   }
   
   .topnav a {
@@ -31,20 +32,26 @@
     display: none;
   }
 
-/* logo section */
 
-
-.logo { 
-    width: 150px;
-    height: 150px; 
-}
-
-.ourlocation{
-    color: rgb(79, 58, 58); 
-    font-size: 50px;
-    font-weight:bold; 
-    font-family: roboto;
-}
+/* logo section design */  
+.logo{
+    width: 200px;
+    height: auto;
+    max-height: 400px;
+        max-width: 400px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        margin-top: 100px;
+  }
+  
+  .cafe-image{
+    width: 100%;
+  }
+  
   
   
   a:-webkit-any-link{
@@ -78,8 +85,8 @@
     cursor: pointer;
     width: 100%;
   }
-​
-​
+
+
   /* on PC */
 @media screen and (min-width: 550px) {
     .featured-image {
@@ -195,7 +202,7 @@
   a:-webkit-any-link{
     text-decoration:none !important;
     }
-​
+
     /* newsletter signup */
 * {box-sizing: border-box}
 /* Full-width input fields */
@@ -207,13 +214,13 @@ display: inline-block;
 border: none;
 background: #f1f1f1;
 }
-​
+
 /* Add a background color when the inputs get focus */
 input[type=text]:focus, input[type=password]:focus {
 background-color: #ddd;
 outline: none;
 }
-​
+
 /* Set a style for all buttons */
 button {
 background-color: black;
@@ -225,28 +232,28 @@ cursor: pointer;
 width: 100%;
 opacity: 0.9;
 }
-​
+
 button:hover {
 opacity:1;
 }
-​
+
 /* Extra styles for the cancel button */
 .cancelbtn {
 padding: 14px 20px;
 background-color: grey;
 }
-​
+
 /* Float cancel and signup buttons and add an equal width */
 .cancelbtn, .signupbtn {
 float: left;
 width: 100%;
 }
-​
+
 /* Add padding to container elements */
 .container {
 padding: 16px;
 }
-​
+
 /* The Modal (background) */
 .modal {
 display: none; /* Hidden by default */
@@ -260,7 +267,7 @@ overflow: auto; /* Enable scroll if needed */
 background-color: #DBC1AC;
 padding-top: 50px;
 }
-​
+
 /* Modal Content/Box */
 .modal-content {
 background-color: #fefefe;
@@ -268,13 +275,13 @@ margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered *
 border: 1px solid #888;
 width: 80%; /* Could be more or less, depending on screen size */
 }
-​
+
 /* Style the horizontal ruler */
 hr {
 border: 1px solid #f1f1f1;
 margin-bottom: 25px;
 }
-​
+
 /* The Close Button (x) */
 .close {
 position: absolute;
@@ -284,27 +291,27 @@ font-size: 40px;
 font-weight: bold;
 color: #f1f1f1;
 }
-​
+
 .close:hover,
 .close:focus {
 color: #f44336;
 cursor: pointer;
 }
-​
+
 /* Clear floats */
 .clearfix::after {
 content: "";
 clear: both;
 display: table;
 }
-​
+
 /* Change styles for cancel button and signup button on extra small screens */
 @media screen and (max-width: 300px) {
 .cancelbtn, .signupbtn {
   width: 100%;
 }
 }
-​
+
 .gallery-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
